@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "CGI_Satelite_Communication": {
+      "commandName": "Project",
+      "commandLineArgs": "E:\\satellites.dat"
+    }
+  }
+}
