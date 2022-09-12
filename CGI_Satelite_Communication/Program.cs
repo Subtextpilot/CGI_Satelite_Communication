@@ -20,7 +20,7 @@ namespace CGI_Satelite_Communication
             GroundStation groundStation = new GroundStation();
 
             groundStation.InputSatelliteData(args[0]);
-            groundStation.SetSatellitesMaxTimeSlots();
+            groundStation.FindSatellitesMaxTimeSlots();
             groundStation.Output();
             
 

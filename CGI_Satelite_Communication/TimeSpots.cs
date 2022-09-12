@@ -18,28 +18,38 @@ namespace CGI_Satelite_Communication
         public TimeSpot(List<Satellite> maxSatellitesSameTime)
         {
             this.MaxSatellitesSameTime = maxSatellitesSameTime;
+            CalculateStartTimePeriod();
+            CalculateEndTimePeriod();
+            CalculateMaxSatellite();
         }   
 
 
-        private void SetStartTimePeriod()
+        private void CalculateStartTimePeriod()
         {
+            if (maxSatellitesSameTime.Count>0)
+            {
             startTimePeriod = MaxSatellitesSameTime.Select(s => s.StartCommunication).Max();
+            }
         }
-        public void SetEndTimePeriod()
+
+        private void CalculateEndTimePeriod()
         {
-            endTimePeriod = MaxSatellitesSameTime.Select(s => s.EndCommunication).Min();
+            if (maxSatellitesSameTime.Count > 0)
+            {
+                endTimePeriod = MaxSatellitesSameTime.Select(s => s.EndCommunication).Min();
+            }
         }
             
-        public void SetMaxSatellite()
+        private void CalculateMaxSatellite()
         {
-            maxSatellite = MaxSatellitesSameTime.Count();
+            if (maxSatellitesSameTime.Count > 0)
+            {
+                maxSatellite = MaxSatellitesSameTime.Count();
+            }
         }
         
         public string TimeSpotToString()
-        {
-            SetStartTimePeriod();
-            SetEndTimePeriod();
-            SetMaxSatellite();
+        {           
 
             return startTimePeriod.ToString("HH:mm:ss.fff")+"-"+ endTimePeriod.ToString("HH:mm:ss.fff") +  ";" + maxSatellite;
         }

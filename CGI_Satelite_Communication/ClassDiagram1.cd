@@ -3,19 +3,30 @@
   <Class Name="CGI_Satelite_Communication.GroundStation">
     <Position X="4" Y="3.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAEQAAAAAAAAAAAAgAIAAAAAABACAAAAAECAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAQAAggAIAABAAABAQAAAAAACAAAAAAA=</HashCode>
       <FileName>GroundStation.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Satellite" />
+      <Property Name="TimeSpot" />
     </ShowAsAssociation>
   </Class>
   <Class Name="CGI_Satelite_Communication.Satellite">
-    <Position X="7" Y="3.5" Width="1.75" />
+    <Position X="4" Y="6.75" Width="2" />
     <TypeIdentifier>
       <HashCode>EAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Satellite.cs</FileName>
     </TypeIdentifier>
+  </Class>
+  <Class Name="CGI_Satelite_Communication.TimeSpot">
+    <Position X="7" Y="3.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAACAAAAAAAAAAAIAAABAQEAAACEAQAAAAAA=</HashCode>
+      <FileName>TimeSpots.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Satellite" />
+    </ShowAsAssociation>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
