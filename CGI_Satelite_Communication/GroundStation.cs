@@ -16,7 +16,7 @@ namespace CGI_Satelite_Communication
             allSatellites = new List<Satellite>();            
             timeSpots = new List<TimeSpot> { new TimeSpot(new List<Satellite>()) };  //requires empty list for comparison in the method FindSatellitesMaxTimeSlots      
         }
-         // Comment    
+        
         
         public void InputSatelliteData(string path)
         {
